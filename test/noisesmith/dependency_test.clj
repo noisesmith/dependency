@@ -1,6 +1,6 @@
-(ns com.stuartsierra.dependency-test
+(ns noisesmith.dependency-test
   (:use clojure.test
-        com.stuartsierra.dependency))
+        noisesmith.dependency))
 
 ;; building a graph like:
 ;;

@@ -6,9 +6,8 @@
 ;; agreeing to be bound by the terms of this license. You must not
 ;; remove this notice, or any other, from this software.
 
-(ns ^{:author "Stuart Sierra"
-      :doc "Directed acyclic graph for representing dependency relationships."}
-  com.stuartsierra.dependency
+(ns
+  noisesmith.dependency
   (:require [clojure.set :as set]))
 
 (defprotocol DependencyGraph
