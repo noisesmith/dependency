@@ -56,12 +56,16 @@
 (deftest t-topo-comparator
   (is (= '(:a :b :d :foo)
          (sort (topo-comparator g1) [:d :a :b :foo])))
-  (is (= '(three five seven nine eight)
-         (sort (topo-comparator g2) '[three seven nine eight five]))))
+  (is (contains? '#{(three five seven nine eight)
+                    (five three seven nine eight)}
+                 (sort (topo-comparator g2) '[three seven nine eight five]))))
 
 (deftest t-topo-sort
-  (is (= '(one two three five six four seven)
-         (topo-sort g2))))
+  (is (contains? '#{(one two three five six four seven)
+                    (five one two three six four seven)
+                    (five one two three four six seven)
+                    (one two five four three six seven)}
+                 (topo-sort g2))))
 
 (deftest t-no-cycles
   (is (thrown? Exception
