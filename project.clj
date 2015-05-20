@@ -1,4 +1,4 @@
-(defproject noisesmith/dependency "0.1.2-SNAPSHOT"
+(defproject noisesmith/dependency "0.1.3"
   :description "A data structure for representing dependency graphs"
   :url "https://github.com/noisesmith/dependency"
   :license {:name "Eclipse Public License"
